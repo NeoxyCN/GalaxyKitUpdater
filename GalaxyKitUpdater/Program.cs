@@ -27,6 +27,7 @@ namespace GalaxyKitUpdater
 
         static void CheckKitUpdate() {
             string json=LoadWeb(definition.gk_url);
+            Console.WriteLine(json);
             JObject jsonObject = JObject.Parse(@json);
             string tagName=(string)jsonObject["tag_name"];
             string id= (string)jsonObject["id"];
